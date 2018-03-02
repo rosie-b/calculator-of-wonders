@@ -1,0 +1,79 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+	font-family: 'Orbitron', sans-serif;
+	color: #1b1f27;
+	text-align: center;
+}
+
+#calculator {
+	background: #697182;
+	width: 280px;
+	height: 270px;
+	padding: 0px 0px 5px 0px;
+	margin: auto;
+	border-radius: 3%;
+	border: #3d4659 solid 1px;
+	box-shadow: #3d4659 3px 5px; 
+	text-align: center;
+}
+
+h1 {  /* override skeleton CSS */
+	padding: 15px 2px 0px 2px;
+	color: #ffffff;
+	font-size: 2rem; 
+	line-height: 1;  
+	letter-spacing: 0.1rem;
+	}
+
+#screen {
+	background: #ecedef;
+	width: 270px;
+	height: 30px;
+	line-height: 30px;
+	padding: 2px;
+	margin: 0px 4px 10px 4px;
+	border: #3d4659 solid 1px;
+	text-align: right;
+}
+
+.button {  /* override skeleton CSS 1rem */
+	margin-bottom: 0.5rem;  
+}
+
+.button.result {  /* override skeleton CSS */
+	width: 270px;  
+	color: white;  
+	background-color: #545a68;  
+}
+
+.button.ce { /* override skeleton CSS */
+	color: white;  
+	background-color: #545a68;  
+}
+
+input[type="button"] {  /* override skeleton CSS */
+	background-color: #969ba7;
+	height: 30px; 
+	line-height: 30px; 
+	width: 64px;
+	padding: 0; 
+}
+
+#smallTxt {
+	font-size: 6px;
+	color: 000000;
+	background: white;
+	width: 312px;
+	height: 30px;
+	margin: 20px;
+}

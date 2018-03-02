@@ -1,0 +1,53 @@
+<DOCTYPE! html>
+<html>
+	
+  <head>
+		<title>Calculator of Wonders</title>
+		<meta charset='UTF-8'>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<link rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css'>
+		<link rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css'>
+		<link rel='stylesheet' type='text/css' href='main.css'>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans|Orbitron' rel='stylesheet'>
+		<script src='calculator.js'></script>
+	</head>
+
+	<body>
+		<div class='container'>
+			<section>
+				<div id='calculator'>
+					<header>
+						<h1>Calculator of Wonders</h1>
+					</header>
+					<form name='calculator'>
+						<input type='text' id='screen'> <!-- calculator screen with input and results -->
+						<!-- buttons for calculator -->
+						
+						<input type='button' class='button' value='7' onclick='numBtn("7")'>
+						<input type='button' class='button' value='8' onclick='numBtn("8")'>
+						<input type='button' class='button' value='9' onclick='numBtn("9")'>
+						<input type='button' class='button' value='+' onclick='opBtn("+")'>
+						<input type='button' class='button' value='4' onclick='numBtn("4")'>
+						<input type='button' class='button' value='5' onclick='numBtn("5")'>
+						<input type='button' class='button' value='6' onclick='numBtn("6")'>
+						<input type='button' class='button' value='-' onclick='opBtn("-")'>
+						<input type='button' class='button' value='1' onclick='numBtn("1")'>
+						<input type='button' class='button' value='2' onclick='numBtn("2")'>
+						<input type='button' class='button' value='3' onclick='numBtn("3")'>
+						<input type='button' class='button' value='*' onclick='opBtn("*")'>
+						<input type='button' class='button' value='.' onclick='numBtn(".")'>
+						<input type='button' class='button' value='0' onclick='numBtn("0")'>
+						<input type='button' class='button' value='/' onclick='opBtn("/")'>
+						<input type='button' class='button ce' value='C' onclick='c()'>		
+						<input type='button' class='button result' value='=' onclick='calc()'>												
+					</form>
+				</div>
+				<div id='smallTxt'>
+					<p><strong>There is a wizard stuck inside your computer, returning solutions to all your problems.</strong></p>
+				</div>
+			</section>
+		</div>	
+	</body>
+
+</html>
+
