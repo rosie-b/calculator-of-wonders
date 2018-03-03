@@ -1,12 +1,20 @@
 var entArr = []; // array of entries to be calculated.
 var entriesStr = ''; // string of valid entries to be pushed onto the array.
 var result = 0;  // variable to hold the result value, once calculation is complete.
+var check = ''; // string to advise if should overwride the values on the screen
 
 // add numbers to the entries string and show values on the screen.
 function numBtn(val) {
-		entriesStr += val
-		document.getElementById('screen').value += val
-   }
+		if (check !== 'overwrite') {
+			entriesStr += val
+			document.getElementById('screen').value += val
+		} else {
+			entArr = []
+			result = val
+			entriesStr = val
+			document.getElementById('screen').value = val
+		}	
+	}
 
 // .push the numbers and operator to the entArr and clear the entries string, ready for new values.
 function opBtn(val) {
@@ -26,6 +34,7 @@ function c() {
 
 // function to calculate the entries
 function calc() {
+	document.getElementById('screen').value = result
 	entArr.push(entriesStr)  // .push the lastest entries to the entArr.
 	entriesStr = '' // empty the entries string, awaiting new values.
 	var x = Number(entArr[0]);  // convert the initial number from string to number.
@@ -35,12 +44,26 @@ function calc() {
 		
 		// perform the calculations
 		if (operatorSymbol === '+') {result = x += y;} 
-		else if (operatorSymbol === '-') {result = x -= y;} 
+		else if (operatorSymbol === '-') {result = x -= y;}
 		else if (operatorSymbol === '*') {result = x *= y;} 
 		else if (operatorSymbol === '/') {result = x /= y;}
 		i++;
 		}
 		document.getElementById('screen').value = result  // update screen to show result of calculation.
 		entArr.push(result)  // result now becomes the new initial number to start subsequent calculations from.
+		entries = result
 	}
 
+// event listener to check if screen values and entArr need to be overwritten
+// i.e. last action was evaluate, next button pushed is a number value. So new calculation to commence.
+document.addEventListener('click',overwriteCheck);
+
+// function to check if should overwrite value and begin new calculation
+function overwriteCheck() {
+	if (entArr.slice(-1)[0] === '+') {check = ''}
+	else if (entArr.slice(-1)[0] === '-') {check = ''}
+	else if (entArr.slice(-1)[0] === '/') {check = ''}
+	else if (entArr.slice(-1)[0] === '*') {check = ''}
+	else if (entArr.slice(-1)[0] === 'undefined') {check = ''}
+	else {check = 'overwrite'}
+}
