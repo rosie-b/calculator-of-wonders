@@ -10,7 +10,7 @@ function numBtn(val) {
 			document.getElementById('screen').value += val
 		} else {
 			entArr = []
-			result = val
+			result = 0
 			entriesStr = val
 			document.getElementById('screen').value = val
 		}	
@@ -65,5 +65,7 @@ function overwriteCheck() {
 	else if (entArr.slice(-1)[0] === '/') {check = ''}
 	else if (entArr.slice(-1)[0] === '*') {check = ''}
 	else if (entArr.slice(-1)[0] === 'undefined') {check = ''}
+	else if (entriesStr !== '') {check = ''}
 	else {check = 'overwrite'}
 }
+
