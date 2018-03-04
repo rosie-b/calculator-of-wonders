@@ -26,10 +26,10 @@ function opBtn(val) {
 
 // clear the screen, entArr and entries string, ready for all new values.
 function c() {
-		entArr = []
-		entriesStr = ''
-		result = 0
-    document.getElementById('screen').value = ''
+	entArr = []
+	entriesStr = ''
+	result = 0
+	document.getElementById('screen').value = ''
 }
 
 // function to calculate the entries
@@ -51,7 +51,6 @@ function calc() {
 		}
 		document.getElementById('screen').value = result  // update screen to show result of calculation.
 		entArr.push(result)  // result now becomes the new initial number to start subsequent calculations from.
-		entries = result
 	}
 
 // event listener to check if screen values and entArr need to be overwritten
@@ -68,4 +67,3 @@ function overwriteCheck() {
 	else if (entriesStr !== '') {check = ''}
 	else {check = 'overwrite'}
 }
-
