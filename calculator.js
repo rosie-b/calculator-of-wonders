@@ -62,7 +62,7 @@ function calc() {
 // i.e. last action was evaluate, next button pushed is a number value. So new calculation to commence.
 document.addEventListener('click',overwriteCheck);
 
-
+/*
 // function to check if should overwrite value and begin new calculation
 function overwriteCheck() {
 	if (entArr.slice(-1)[0] === '+') {check = ''}
@@ -72,14 +72,13 @@ function overwriteCheck() {
 	else if (entArr.slice(-1)[0] === 'undefined') {check = ''}
 	else if (entStr !== '') {check = ''}
 	else {check = 'overwrite'}
-}
+} */
 
-/*	// REFACTORED - function to check if should overwrite value and begin new calculation
+// REFACTORED - function to check if should overwrite value and begin new calculation
 function overwriteCheck() {
-	var lastEntry = entArr.slice(=1)[0]
-	document.getElementById('lastKey').value = lastEntry
+	var lastEntry = entArr.slice(-1)[0]
 	var options = ['+', '-', '/', '*', 'undefined']
 	if (options.indexOf(lastEntry) +1) {check = ''}
 	else if (entStr !== '') {check = ''}
 	else {check = 'overwrite'}
-}*/
+}
