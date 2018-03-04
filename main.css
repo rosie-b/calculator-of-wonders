@@ -51,7 +51,7 @@ h1 {  /* override skeleton CSS */
 }
 
 .button.result {  /* override skeleton CSS */
-	width: 270px;  
+	width: 200px;  
 	color: white;  
 	background-color: #545a68;  
 }
